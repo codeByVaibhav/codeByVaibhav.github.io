@@ -361,6 +361,13 @@ h6 {
     object-fit: cover;
 }
 
+.video-thumbnail-potrait {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
 .project-preview {
     background-color: #fff;
     padding: 15px;
