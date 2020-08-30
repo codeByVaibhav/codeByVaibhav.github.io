@@ -11,12 +11,20 @@
 
 // Looping Themes
 (() => {
+    let loop = true;
+    let checkbox = document.querySelector("input[name=checkbox]");
+    checkbox.addEventListener('change', function () {
+        loop = !this.checked;
+    });
+    // loop
     const themes = ['light', 'blue', 'green', 'purple'];
     let current_theme = 0;
     (function themeLooper() {
-        let mode = themes[current_theme];
-        document.getElementById('theme-style').href = mode === 'light' ? 'default.css' : mode + '.css';
-        current_theme = current_theme === themes.length - 1 ? 0 : current_theme + 1;
+        if (loop) {
+            let mode = themes[current_theme];
+            document.getElementById('theme-style').href = mode === 'light' ? 'default.css' : mode + '.css';
+            current_theme = current_theme === themes.length - 1 ? 0 : current_theme + 1;
+        }
         setTimeout(themeLooper, 10000);
     })();
 })();
