@@ -100,11 +100,11 @@ h6 {
     overflow: auto;
 }
 
-/* .s2 {
+.s2 {
     background-color: var(--secondaryColor);
     border-bottom: 1px solid var(--borderColor);
     overflow: auto;
-} */
+}
 
 .main-container {
     width: 1200px;
